@@ -1,0 +1,73 @@
+$transition-time: 0.6s;
+#skills {
+    position: relative;
+    width: 100%;
+    #dev-skills {
+        ul {
+            width: 100%;
+            list-style: none;
+        }
+        ul,
+        li {
+            padding: 0.3em 0;
+            margin: 0
+        }
+        li {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            .icon {
+                svg {
+                    width: 2em;
+                    fill: $logos-fill-color;
+                    transition: fill $transition-time, width $transition-time;
+                }
+            }
+            div.bar-wrapper {
+                width: 100%;
+                padding-left: 1em;
+                flex-grow: 1;
+                .skill-bar {
+                    position: relative;
+                    background: $bar-background;
+                    height: 2px;
+                    width: 100%;
+                    border-radius: 2px;
+                    .bar {
+                        position: absolute;
+                        top: -1px;
+                        height: 4px;
+                        background: $bar-color;
+                        box-shadow: 0 0 0 $bar-color;
+                        border-radius: 5px;
+                        transition: height $transition-time, top $transition-time, background $transition-time, box-shadow $transition-time;
+                    }
+                    .label {
+                        position: absolute;
+                        color: $titles-color;
+                        top: 10px;
+                        left: 48%;
+                    }
+                }
+            }
+            &:hover {
+                .icon {
+                    svg {
+                        width: 2.3em;
+                        fill: $bar-color-hover;
+                    }
+                }
+                div.bar-wrapper {
+                    .skill-bar {
+                        .bar {
+                            height: 6px;
+                            top: -2px;
+                            background: $bar-color-hover;
+                            box-shadow: 0 0 0 $bar-color-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

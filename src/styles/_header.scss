@@ -1,0 +1,15 @@
+#about {
+    .profile-img {
+        width: 5em;
+        height: 5em;
+        background: $logos-fill-color;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        span {            
+            font-size: 2em;
+        }
+    }
+}
