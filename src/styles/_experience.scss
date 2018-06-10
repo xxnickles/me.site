@@ -1,0 +1,6 @@
+article#experiences {
+    .content{
+        @include center-as-column;
+    }
+  
+}

@@ -42,7 +42,7 @@ const processSkill = (element: HTMLElement, delay = 0) => {
 
 
 const listItems = (document.querySelectorAll('#dev-skills li') as NodeListOf<HTMLElement>).forEach((element, index) => {
-    processSkill(element, index * 200);
+    processSkill(element, index * 100);
 });
 
 

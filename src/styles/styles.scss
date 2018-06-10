@@ -1,20 +1,25 @@
 @import './_variables.scss';
+@import './_timeline.scss';
+@import './_mixins.scss';
 @import './_header.scss';
 @import './_skills.scss';
+@import './_experience.scss';   
 body {
-    padding: 4%;
+    padding: 0;
     margin: 0;
     background-color: $background-color;
-    color: $font-color;  
+    color: $font-color;
     font-family: $primary-font;
 }
 
-.wrapper {
-    width: calc(100vw - 8%);
-}
-
 main {
-    min-height: 100vh;
+    color: $secondary-font-color;
+    section {
+        padding: 1em 1em 0;
+    }
+    section:not(:last-child) {
+        border-bottom: 7px solid $bar-background;
+    }
 }
 
 @for $i from 1 through 6 {

@@ -1,20 +1,43 @@
 #about {
+    background-color: $logos-fill-color;
+    padding: 1em;
+    line-height: 0;
+    border-bottom: 3px solid $bar-background;
+    text-align: center;
+    @include center-as-column;
+    span,
+    p {
+        opacity: 0.8;
+    }
+    p {
+        line-height: 1.25;
+    }
     header {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        text-align: center;
+        @include center-as-column;
         .profile-img {
             width: 5em;
             height: 5em;
-            background: $logos-fill-color;
+            background: $background-color;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
+            margin: 0 0 1em;
             span {
                 font-size: 2em;
+            }
+        }
+        h2 {
+            line-height: 0.8;
+            margin: 1em 0 0;
+        }
+        h1 {
+            line-height: 0.2;           
+        }
+        @for $i from 1 through 6 {
+            h#{$i} {
+                color: $font-color;
             }
         }
     }

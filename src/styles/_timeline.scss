@@ -1,0 +1,28 @@
+.timeline {
+    list-style: none;
+    &>li {
+        // margin-bottom: 60px;
+        overflow: hidden;
+        margin: 0;
+        position: relative;
+    }
+    .timeline-date {
+        width: 7em;
+        float: left;
+        margin-top: 1.3em;
+    }
+    .timeline-content {
+        float: left;
+        border-left: 3px $bar-background solid;
+        padding-left: 2em;
+    }
+    .dot {
+        width: 12px;
+        height: 12px;
+        background: $bar-color;
+        position: absolute;
+        left: 6.7em;
+        top: 1.5em;
+        border-radius: 100%;
+    }
+}
