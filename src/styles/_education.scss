@@ -1,8 +1,9 @@
-article#experiences {
-    .content {
+article#formal-education {
+    .content{
         @include center-as-column;
-        &>div {
+        & > div {
             width: 100%;
         }
     }
+  
 }

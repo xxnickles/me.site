@@ -1,17 +1,39 @@
+$transition-time: 0.6s;
 .timeline {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     &>li {
         // margin-bottom: 60px;
         overflow: hidden;
         margin: 0;
         position: relative;
+        transition: color $transition-time;
+        h3 {
+            transition: color $transition-time;
+        }
+    }
+    &>li:hover {
+        color: $bar-color-hover;
+        h3 {
+            color: $bar-color-hover;
+        }
+        .dot {
+            background: $bar-color-hover;
+            animation: pulse 1.5s infinite;
+            box-shadow: 0 0 0 0 rgba($bar-color-hover, .5);
+        }
     }
     .timeline-date {
-        width: 7em;
+        width: 35%;
         float: left;
         margin-top: 1.3em;
+        text-align: right;
+        padding-right: 2em;
     }
     .timeline-content {
+        max-width: 40%;
         float: left;
         border-left: 3px $bar-background solid;
         padding-left: 2em;
@@ -21,8 +43,22 @@
         height: 12px;
         background: $bar-color;
         position: absolute;
-        left: 6.7em;
+        left: calc(35% + 1.7em);
         top: 1.5em;
         border-radius: 100%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.9);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba($bar-color-hover, 0);
+    }
+    100% {
+        transform: scale(.9);
+        box-shadow: 0 0 0 0 rgba($bar-color-hover, 0);
     }
 }
