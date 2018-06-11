@@ -1,7 +1,7 @@
 {
   "name": "me.site",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal Resume",
   "scripts": {
     "dev": "parcel ./public/index.html"
   },
