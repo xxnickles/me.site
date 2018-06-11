@@ -17,7 +17,7 @@ $transition-time: 0.6s;
             align-items: center;
             .icon {
                 svg {
-                    width: 2em;
+                    width: 1.8em;
                     fill: $logos-fill-color;
                     transition: fill $transition-time, width $transition-time;
                 }

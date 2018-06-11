@@ -1,4 +1,6 @@
-#about {
+section#about {
+    @include vertical-alignment;
+    height: 100vh;
     background-color: $logos-fill-color;
     padding: 1em;
     border-bottom: 3px solid $bar-background;
@@ -12,7 +14,7 @@
         line-height: 1.25;
     }
     header {
-        @include center-as-column;
+        @include center-as-column;        
         .profile-img {
             width: 5.5em;
             height: 5.5em;
