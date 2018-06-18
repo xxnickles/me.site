@@ -19,10 +19,15 @@ main {
     color: $secondary-font-color;
     section {
         padding: 1em;
-    } 
-    // section:not(:last-child) {
-    //     border-bottom: 4px solid $bar-background;
-    // }
+    }
+}
+
+footer {
+    border: 2px solid $bar-color;
+    // color: $secondary-font-color;
+    background-color: $bar-color;
+    padding: 0.7em;
+    text-align: center;
 }
 
 @for $i from 1 through 6 {
@@ -33,19 +38,19 @@ main {
 
 @media screen and (min-width: 800px) {
     section#about {
-        width: 20%;
+        width: 25%;
         position: fixed;
         z-index: 1;
     }
     main {
         display: grid;
-        grid-template-columns: calc(20% + 2em) auto;
+        grid-template-columns: calc(25% + 2em) auto;
         .main-wrapper {
             grid-column-start: 2;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
-            grid-template-areas: "experience education" "skills skills";
+            grid-template-areas: "skills skills" "experience education";
             section#skills {
                 grid-area: skills;
                 border: none;
@@ -56,6 +61,13 @@ main {
             section#experience {
                 grid-area: experience;
             }
+        }
+    }
+    footer {
+        display: grid;
+        grid-template-columns: calc(25% + 2em) auto;
+        span {
+            grid-column-start: 2;
         }
     }
 }
