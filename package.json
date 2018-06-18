@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Personal Resume",
   "scripts": {
-    "dev": "parcel ./public/index.html && workbox injectManifest"
+    "dev": "parcel ./public/index.html && workbox injectManifest",
+    "build": "parcel build ./public/index.html && workbox injectManifest"
   },
   "author": "Alex F.",
   "license": "ISC",
