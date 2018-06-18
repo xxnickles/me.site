@@ -291,10 +291,24 @@
         </div>
     </main>
 
-    <footer><span>Alex Flechas @ 2018</span></footer>
+    <footer>
+        <span>Alex Flechas @ 2018</span>
+    </footer>
 
 
     <script src="../src/scripts/app.ts"></script>
+    <script>
+        // Register workbox
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js').then(registration => {
+                    console.log('SW registered');
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
 
 </body>
 
