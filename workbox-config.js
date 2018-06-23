@@ -6,6 +6,6 @@ module.exports = {
     "globIgnores" : [
       "register-sw*.js"   
     ],
-    "swDest": "dist\\sw.js",
-    "swSrc": "src\\sw-base.js"
+    "swDest": "dist/sw.js",
+    "swSrc": "src/sw-base.js"
   };

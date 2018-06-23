@@ -23,8 +23,7 @@ main {
 }
 
 footer {
-    border: 2px solid $bar-color;
-    // color: $secondary-font-color;
+    border: 2px solid $bar-color; // color: $secondary-font-color;
     background-color: $bar-color;
     padding: 0.7em;
     text-align: center;
@@ -36,7 +35,8 @@ footer {
     }
 }
 
-@media screen and (min-width: 800px) {
+
+@media only screen and (min-width: 800px) {
     section#about {
         width: 25%;
         position: fixed;
@@ -48,7 +48,7 @@ footer {
         .main-wrapper {
             grid-column-start: 2;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr); 
             grid-template-rows: auto;
             grid-template-areas: "skills skills" "experience education";
             section#skills {

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Personal Resume",
   "scripts": {
+    "start": "",
     "dev": "parcel ./public/index.html && workbox injectManifest",
     "build": "parcel build ./public/index.html && workbox injectManifest"
   },
