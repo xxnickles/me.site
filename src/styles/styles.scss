@@ -35,7 +35,6 @@ footer {
     }
 }
 
-
 @media only screen and (min-width: 800px) {
     section#about {
         width: 25%;
@@ -48,7 +47,7 @@ footer {
         .main-wrapper {
             grid-column-start: 2;
             display: grid;
-            grid-template-columns: repeat(2, 1fr); 
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: auto;
             grid-template-areas: "skills skills" "experience education";
             section#skills {

@@ -1,6 +1,6 @@
 $transition-time: 0.6s;
 #skills {
-    position: relative;   
+    position: relative;
     #dev-skills {
         ul {
             width: 100%;
@@ -17,7 +17,7 @@ $transition-time: 0.6s;
             align-items: center;
             .icon {
                 svg {
-                    width: 1.8em;
+                    width: 1.9em;
                     fill: $logos-fill-color;
                     transition: fill $transition-time, width $transition-time;
                 }
@@ -29,17 +29,24 @@ $transition-time: 0.6s;
                 .skill-bar {
                     position: relative;
                     background: $bar-background;
-                    height: 2px;
+                    height: 10px;
                     width: 100%;
                     border-radius: 2px;
                     .bar {
                         position: absolute;
                         top: -1px;
-                        height: 4px;
+                        height: 12px;
                         background: $bar-color;
                         box-shadow: 0 0 0 $bar-color;
                         border-radius: 5px;
                         transition: height $transition-time, top $transition-time, background $transition-time, box-shadow $transition-time;
+                        span {
+                            font-size: .68em;
+                            position: absolute;
+                            right: 0%;
+                            padding-right: 0.68em;
+                            color: $font-color;
+                        }
                     }
                     .label {
                         position: absolute;
@@ -52,15 +59,12 @@ $transition-time: 0.6s;
             &:hover {
                 .icon {
                     svg {
-                        width: 2em;
                         fill: $bar-color-hover;
                     }
                 }
                 div.bar-wrapper {
                     .skill-bar {
                         .bar {
-                            height: 6px;
-                            top: -2px;
                             background: $bar-color-hover;
                             box-shadow: 0 0 0 $bar-color-hover;
                         }
