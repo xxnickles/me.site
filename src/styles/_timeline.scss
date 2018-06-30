@@ -14,7 +14,8 @@ $transition-time: 0.6s;
             transition: color $transition-time;
         }
     }
-    &>li:hover {
+    &>li:hover,
+    &>li:focus {
         color: $bar-color-hover;
         h3 {
             color: $bar-color-hover;
