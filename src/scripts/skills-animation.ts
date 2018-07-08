@@ -13,6 +13,7 @@ const addAnimationToBar = (element: HTMLElement, targetWidth: string, delay: num
             });
     } else {
         // fallback
+        // @ts-ignore
         element.style.width = `${targetWidth}%`;
     }
 
