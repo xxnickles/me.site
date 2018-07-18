@@ -1,6 +1,7 @@
 import { evaluateTriggerAnimation, addOnLoadListener, calculateElementYPosition, addScrollListener, removeScrollListener } from "./skills-animation.utils";
 
 const addAnimationToBar = (element: HTMLElement, targetWidth: string, delay: number) => {
+    let innerSpan = element.querySelector('span');
     if ('animate' in element) {
         element.animate([
             { width: 0 },
@@ -11,10 +12,24 @@ const addAnimationToBar = (element: HTMLElement, targetWidth: string, delay: num
                 fill: 'forwards',
                 easing: 'ease-out',
             });
+        if (innerSpan) {
+            innerSpan.animate([
+                { opacity: 0 },
+                { opacity: 1 }
+            ], {
+                    duration: 700,
+                    delay: delay,
+                    fill: 'forwards',
+                    easing: 'ease-out',
+                });
+        }
+
     } else {
         // fallback
         // @ts-ignore
         element.style.width = `${targetWidth}%`;
+        // @ts-ignore
+        innerSpan.style.opacity = '1';
     }
 
 }
@@ -28,7 +43,7 @@ const processSkill = (element: HTMLElement, delay = 0) => {
 }
 
 function executeAnimation(element: HTMLElement) {
-    (element.querySelectorAll('li') as NodeListOf<HTMLElement>).forEach((element, index) => {
+    nodesAsArray(element.querySelectorAll('li') as NodeListOf<HTMLElement>).forEach((element, index) => {
         processSkill(element, index * 100);
     });
 }
@@ -41,7 +56,6 @@ function checkPositionsOnload(elements: NodeListOf<HTMLElement>) {
 }
 
 function checkPositionsOnScroll() {
-
     return (event: UIEvent) => {
         const elements = getBarContainers();
         tryToAnimate(elements)
@@ -51,7 +65,8 @@ function checkPositionsOnScroll() {
 }
 
 function tryToAnimate(elements: NodeListOf<HTMLElement>) {
-    elements.forEach((element) => {
+
+    nodesAsArray(elements).forEach((element) => {
         const shouldTriggerAnimation = evaluateTriggerAnimation(calculateElementYPosition(element));
         if (shouldTriggerAnimation) {
             executeAnimation(element);
@@ -62,6 +77,10 @@ function tryToAnimate(elements: NodeListOf<HTMLElement>) {
 
 function getBarContainers() {
     return document.querySelectorAll('ul.timeline.animate') as NodeListOf<HTMLElement>;
+}
+
+function nodesAsArray(elements: NodeListOf<HTMLElement>): HTMLElement[] {
+    return Array.prototype.slice.call(elements, 0);
 }
 
 export function initBarAnimation() {
