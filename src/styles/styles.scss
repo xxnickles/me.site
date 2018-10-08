@@ -45,7 +45,21 @@ footer {
     color: rgb(102, 102, 102);
     padding: 0.5em;
 
-    // text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+
+    .online {
+        color: $success-color;
+    }
+
+    .offline {
+        color: $error-color;
+    }
+
 }
 
 @for $i from 1 through 6 {
@@ -59,17 +73,20 @@ footer {
         grid-area: about;
         height: calc(100% - 1em);
     }
+
     main {
         grid-area: page-content;
     }
+
     footer {
         grid-area: footer;
     }
 
     body {
+        min-height: 100vh;
         display: grid;
         grid-template-columns: 30% auto;
-        grid-template-rows: auto;
+        grid-template-rows: auto 30px;
         grid-template-areas: "about page-content"
             "footer footer";
     }
@@ -96,14 +113,5 @@ footer {
                 grid-area: experience;
             }
         }
-    }
-
-    footer {
-
-        // display: grid;
-        // grid-template-columns: calc(25% + 2em) auto;
-        // span {
-        //     grid-column-start: 2;
-        // }
     }
 }
