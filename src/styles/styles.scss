@@ -1,5 +1,6 @@
-@import './fontello';
+@import './_fontello';
 @import './_variables.scss';
+@import './_animations.scss';
 @import './_timeline.scss';
 @import './_mixins.scss';
 @import './_header.scss';
@@ -16,16 +17,6 @@ body {
     font-size: 1em;
     min-width: 320px;
     animation: 1.5s ease-out 0s 1 fadeIn;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 main {
@@ -51,7 +42,6 @@ footer {
     align-items: center;
     align-content: center;
 
-
     .online {
         color: $success-color;
     }
@@ -59,6 +49,7 @@ footer {
     .offline {
         color: $error-color;
     }
+
 
 }
 

@@ -33,11 +33,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "app.3520ee44.css",
-    "revision": "3b78c4b8ab4c91671e6ac5d3b522bb15"
+    "revision": "4ffc24791142f46159f5d4978003d1e6"
   },
   {
     "url": "app.3520ee44.js",
-    "revision": "fcfa06901f98ab21c7d1b5aa72614c67"
+    "revision": "fbc8ba5460cc29d679438462e60a2706"
   },
   {
     "url": "app.724837c9.css",
