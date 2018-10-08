@@ -18,7 +18,7 @@ $transition-time: 0.6s;
             .icon {
                 svg {
                     width: 1.9em;
-                    fill: $logos-fill-color;
+                    fill: $alt-color;
                     transition: fill $transition-time, width $transition-time;
                 }
             }
@@ -36,8 +36,8 @@ $transition-time: 0.6s;
                         position: absolute;
                         top: -1px;
                         height: 12px;
-                        background: $bar-color;
-                        box-shadow: 0 0 0 $bar-color;
+                        background: $alt-color;
+                        box-shadow: 0 0 0 $alt-color;
                         border-radius: 5px;
                         transition: height $transition-time, top $transition-time, background $transition-time, box-shadow $transition-time;
                         span {
@@ -59,14 +59,14 @@ $transition-time: 0.6s;
             &:hover, &:focus {
                 .icon {
                     svg {
-                        fill: $bar-color-hover;
+                        fill: $color-hover;
                     }
                 }
                 div.bar-wrapper {
                     .skill-bar {
                         .bar {
-                            background: $bar-color-hover;
-                            box-shadow: 0 0 0 $bar-color-hover;
+                            background: $color-hover;
+                            box-shadow: 0 0 0 $color-hover;
                         }
                     }
                 }

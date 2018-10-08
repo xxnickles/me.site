@@ -16,14 +16,14 @@ $transition-time: 0.6s;
     }
     &>li:hover,
     &>li:focus {
-        color: $bar-color-hover;
+        color: $color-hover;
         h3 {
-            color: $bar-color-hover;
+            color: $color-hover;
         }
         .dot {
-            background: $bar-color-hover;
+            background: $color-hover;
             animation: pulse 1.5s infinite;
-            box-shadow: 0 0 0 0 rgba($bar-color-hover, .5);
+            box-shadow: 0 0 0 0 rgba($color-hover, .5);
         }
     }
     .timeline-date {
@@ -42,7 +42,7 @@ $transition-time: 0.6s;
     .dot {
         width: 12px;
         height: 12px;
-        background: $bar-color;
+        background: $alt-color;
         position: absolute;
         left: calc(35% + 1.7em);
         top: 1.5em;
@@ -56,10 +56,10 @@ $transition-time: 0.6s;
     }
     70% {
         transform: scale(1);
-        box-shadow: 0 0 0 20px rgba($bar-color-hover, 0);
+        box-shadow: 0 0 0 20px rgba($color-hover, 0);
     }
     100% {
         transform: scale(.9);
-        box-shadow: 0 0 0 0 rgba($bar-color-hover, 0);
+        box-shadow: 0 0 0 0 rgba($color-hover, 0);
     }
 }

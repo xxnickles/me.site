@@ -4,15 +4,15 @@
   "description": "Personal Resume",
   "scripts": {
     "start": "",
-    "dev": "parcel ./public/index.html && workbox injectManifest",
-    "build": "parcel build ./public/index.html && workbox injectManifest"
+    "dev": "workbox injectManifest && parcel ./public/index.html",
+    "build": "workbox injectManifest && parcel build ./public/index.html"
   },
   "author": "Alex F.",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.9.2",
-    "parcel-bundler": "^1.9.7",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.10.2",
     "typescript": "^2.9.2",
-    "workbox-cli": "^3.4.1"
+    "workbox-cli": "^3.6.2"
   }
 }
