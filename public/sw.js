@@ -1,4 +1,4 @@
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 workbox.skipWaiting();
 workbox.clientsClaim();
 
@@ -33,11 +33,19 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "app.3520ee44.css",
-    "revision": "4ffc24791142f46159f5d4978003d1e6"
+    "revision": "efe1d59cebef1064dfb172a0f2521a5b"
   },
   {
     "url": "app.3520ee44.js",
-    "revision": "8969032fb2a7ba2701e9b8b83c2f8ec9"
+    "revision": "80b371ac698ac5f8e6e7f65662992f13"
+  },
+  {
+    "url": "app.61592c50.css",
+    "revision": "24985424ffc940de172a946bbb196576"
+  },
+  {
+    "url": "app.61592c50.js",
+    "revision": "2f47fd073f0fa688554bbab31da5a039"
   },
   {
     "url": "app.724837c9.css",
