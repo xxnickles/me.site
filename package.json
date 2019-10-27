@@ -10,9 +10,9 @@
   "author": "Alex F.",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0",
-    "parcel-bundler": "^1.12.3",
-    "typescript": "^3.5.2",
-    "workbox-cli": "^3.6.3"
+    "node-sass": "^4.13.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.6.4",
+    "workbox-cli": "^4.3.1"
   }
 }
