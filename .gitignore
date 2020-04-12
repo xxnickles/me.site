@@ -13,6 +13,7 @@ yarn-error.log*
 
 # parcel
 .cache
+.parcel-cache
 
 # Editor directories and files
 .idea

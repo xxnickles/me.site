@@ -1,13 +1,11 @@
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
-workbox.skipWaiting();
-workbox.clientsClaim();
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
 workbox.routing.registerRoute(
     new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
-    workbox.strategies.cacheFirst({
+    new workbox.strategies.CacheFirst({
         cacheName: 'googleapis',
         plugins: [
-            new workbox.expiration.Plugin({
+            new workbox.expiration.ExpirationPlugin({
                 maxEntries: 30,
             }),
         ],
@@ -16,14 +14,14 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
     /\.(?:js|css)$/,
-    workbox.strategies.staleWhileRevalidate({
+    new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'static-resources',
     }),
 );
 
 workbox.routing.registerRoute(
     new RegExp('/'),
-    workbox.strategies.networkFirst()
+    new workbox.strategies.NetworkFirst()
 );
 
 workbox.precaching.precacheAndRoute([
@@ -37,7 +35,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "app.3520ee44.js",
-    "revision": "160c3f605248f3450fc07606129561dc"
+    "revision": "fc5cb85a474f155554da895057809fd2"
   },
   {
     "url": "app.61592c50.css",

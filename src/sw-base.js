@@ -1,13 +1,13 @@
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 workbox.skipWaiting();
 workbox.clientsClaim();
 
 workbox.routing.registerRoute(
     new RegExp('https://fonts.(?:googleapis|gstatic).com/(.*)'),
-    workbox.strategies.cacheFirst({
+    new workbox.strategies.CacheFirst({
         cacheName: 'googleapis',
         plugins: [
-            new workbox.expiration.Plugin({
+            new workbox.expiration.ExpirationPlugin({
                 maxEntries: 30,
             }),
         ],

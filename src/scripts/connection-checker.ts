@@ -22,7 +22,7 @@ function initialize(connectionIndicatorElement: Element | null) {
 
 function setOnline(
     connectionIndicatorElement: Element | null,
-    message: string = 'Online') {
+    message: string = 'You are online') {
     setOnlineClass(connectionIndicatorElement);
     setConnectionIndicatorText(connectionIndicatorElement, message);
 }
