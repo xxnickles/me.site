@@ -1,4 +1,6 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+// importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.5.1/workbox-sw.js');
+precacheAndRoute(self.__WB_MANIFEST)
+
 workbox.skipWaiting();
 workbox.clientsClaim();
 

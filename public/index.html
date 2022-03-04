@@ -266,30 +266,7 @@
                         </li>
 
                     </ul>
-                    <h3>In the pipleline</h3>
-                    <ul class="timeline animate">
-                        <li id="elm-lang" data-percent="50">
-                            <div class="icon">
-                                <svg viewBox="0 0 65 65" stroke="#000">
-                                    <title>elm-lang</title>
 
-                                    <path
-                                        d="M 32 30.245002746582 L 45.8300170898438 16.4150009155273 L 18.1700134277344 16.4150009155273 Z M 1.7550048828125 0 L 15.6849975585938 13.9300003051758 L 45.9700012207031 13.9300003051758 L 32.0369873046875 0 Z M 48.8949890136719 16.8600006103516 L 63.9670104980469 31.9300003051758 L 48.8269958496094 47.0699996948242 L 33.7550048828125 32 Z M 64 28.4519958496094 L 64 0 L 35.5480041503906 0 Z M 30.2439880371094 32 L 0 1.7559967041016 L 0 62.2559967041016 Z M 50.583984375 48.8280029296875 L 64 62.2449951171875 L 64 35.4000015258789 Z M 32 33.7559967041016 L 1.7560119628906 64 L 62.2560119628906 64 Z"
-                                        stroke="none"></path>
-
-                                </svg>
-                            </div>
-                            <div class="bar-wrapper">
-                                <div class="skill-bar">
-                                    <div class="bar">
-                                        <span>55%</span>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </li>
-                    </ul>
                     <h3>Tech</h3>
                     <div class="badge-container">
                         <span class="badge">Cloud Computing</span>
@@ -342,7 +319,7 @@
             <section id="experience">
                 <article id="experiences">
                     <header>
-                        <h3>Expirence (Last 4)</h3>
+                        <h3>Expirence (Last 3)</h3>
                     </header>
                     <div class="content">
 
@@ -352,7 +329,7 @@
                                 <div class="dot"></div>
                                 <div class="timeline-content">
                                     <h3>AAMVA 🇺🇸</h3>
-                                    <p>Software Engineer</p>
+                                    <p>Sr. Software Engineer</p>
                                 </div>
                             </li>
                             <li>
@@ -360,14 +337,6 @@
                                 <div class="dot"></div>
                                 <div class="timeline-content">
                                     <h3>JobSprint (ACR) 🇺🇸</h3>
-                                    <p>Dotnet Developer</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="timeline-date">2015 - 2016</p>
-                                <div class="dot"></div>
-                                <div class="timeline-content">
-                                    <h3>Incepio 🇺🇸</h3>
                                     <p>Dotnet Developer</p>
                                 </div>
                             </li>
@@ -396,12 +365,12 @@
 
     </footer>
 
-    <script src="../src/scripts/app.ts"></script>
-    <script>
+    <script src="../src/scripts/app.ts" type="module"></script>
+    <script type="module">
         // Register workbox
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js').then(registration => {
+                navigator.serviceWorker.register(new URL('sw.js', import.meta.url)).then(registration => {
                     console.log('SW registered');
                 }).catch(registrationError => {
                     console.log('SW registration failed: ', registrationError);
