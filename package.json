@@ -10,10 +10,10 @@
   "author": "Alex F.",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.3.2",
-    "parcel": "^2.3.2",
-    "sass": "^1.49.9",
-    "typescript": "^4.6.2",
-    "workbox-cli": "^6.5.1"
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "sass": "^1.54.8",
+    "typescript": "^4.8.2",
+    "workbox-cli": "^6.5.4"
   }
 }
