@@ -1,8 +1,0 @@
-article#formal-education {   
-    .content {
-        @include center-as-column;
-        &>div {
-            width: 100%;
-        }
-    }
-}

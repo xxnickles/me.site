@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alex Flechas — Software Engineer. Personal portfolio site.">
+  <meta name="author" content="Alex Flechas">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <title>Alex Flechas — Software Engineer</title>
+  <script>
+    // Detect theme before first paint to prevent flash
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && matchMedia('(prefers-color-scheme:dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <main class="desktop">
+
+    <!-- Profile -->
+    <win-window class="profile-window" title="profile.exe" icon="user">
+      <section aria-label="Profile">
+        <div class="avatar" aria-hidden="true">AF</div>
+        <div class="profile-info">
+          <h1 class="profile-name">Alex Flechas</h1>
+          <p class="profile-title">Software Engineer</p>
+        </div>
+        <div class="profile-sections">
+          <div>
+            <hr class="separator">
+            <h3 class="section-label">About Me</h3>
+            <p class="about-text">I &#10084;&#65039; software development. Do you really need to know anything else?</p>
+          </div>
+          <address>
+            <hr class="separator">
+            <h3 class="section-label">Contact</h3>
+            <a class="contact-link" href="https://www.linkedin.com/in/alexflechas/" target="_blank" rel="noopener">
+              <i data-lucide="linkedin"></i> LinkedIn
+            </a>
+          </address>
+        </div>
+      </section>
+    </win-window>
+
+    <!-- Skills -->
+    <win-window class="skills-window" title="skills.dll" icon="code">
+      <section aria-label="Skills">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill-badges">
+              <span class="badge">C#</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">F#</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Web Technologies</h3>
+            <div class="skill-badges">
+              <span class="badge">.NET</span>
+              <span class="badge">NodeJS</span>
+              <span class="badge">Vue</span>
+              <span class="badge">Angular</span>
+              <span class="badge">Webpack</span>
+              <span class="badge">CSS</span>
+              <span class="badge">HTMX</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Cloud</h3>
+            <div class="skill-badges">
+              <span class="badge">Azure</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tech</h3>
+            <div class="skill-badges">
+              <span class="badge">Cloud Computing</span>
+              <span class="badge">Serverless</span>
+              <span class="badge">SQL</span>
+              <span class="badge">NoSQL</span>
+              <span class="badge">Design Patterns</span>
+              <span class="badge">Functional Programming</span>
+              <span class="badge">Object-Oriented Programming</span>
+              <span class="badge">Reactive Programming</span>
+              <span class="badge">Real-time Programming</span>
+              <span class="badge">Front-End Development</span>
+              <span class="badge">Back-End Development</span>
+              <span class="badge">Business Applications</span>
+              <span class="badge">Web Applications</span>
+              <span class="badge">Progressive Applications</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </win-window>
+
+    <!-- Experience: Tree View -->
+    <win-window class="experience-window" title="experience.log" icon="briefcase">
+      <section aria-label="Experience" id="experience-tree">
+        <ul class="tree">
+          <li class="tree-node">
+            <div class="tree-header">
+              <i data-lucide="chevron-down" class="chevron"></i>
+              <i data-lucide="folder" class="folder-icon"></i>
+              AAMVA &#127482;&#127480;
+            </div>
+            <ul class="tree-children">
+              <li class="tree-leaf"><b>Role:</b> Sr. Software Engineer</li>
+              <li class="tree-leaf"><b>Period:</b> 2018 &ndash; Present</li>
+            </ul>
+          </li>
+          <li class="tree-node">
+            <div class="tree-header">
+              <i data-lucide="chevron-down" class="chevron"></i>
+              <i data-lucide="folder" class="folder-icon"></i>
+              JobSprint (ACR) &#127482;&#127480;
+            </div>
+            <ul class="tree-children">
+              <li class="tree-leaf"><b>Role:</b> Dotnet Developer</li>
+              <li class="tree-leaf"><b>Period:</b> 2017</li>
+            </ul>
+          </li>
+          <li class="tree-node">
+            <div class="tree-header">
+              <i data-lucide="chevron-down" class="chevron"></i>
+              <i data-lucide="folder" class="folder-icon"></i>
+              Intersoft (elEmpleo.com) &#127464;&#127476;
+            </div>
+            <ul class="tree-children">
+              <li class="tree-leaf"><b>Role:</b> Consultant Engineer</li>
+              <li class="tree-leaf"><b>Period:</b> 2013 &ndash; 2014</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </win-window>
+
+    <!-- Education: Tabs -->
+    <win-window class="education-window" title="education.dat" icon="graduation-cap">
+      <section aria-label="Education" id="education-tabs">
+        <div class="tab-control">
+          <div class="tab-bar" role="tablist" aria-label="Education entries">
+            <button role="tab" id="tab-strayer" aria-selected="true" aria-controls="panel-strayer" tabindex="0" class="tab-btn">Strayer</button>
+            <button role="tab" id="tab-ulibre" aria-selected="false" aria-controls="panel-ulibre" tabindex="-1" class="tab-btn">U. Libre</button>
+          </div>
+          <div class="tab-panel-area">
+            <div role="tabpanel" id="panel-strayer" aria-labelledby="tab-strayer" class="tab-panel">
+              <dl>
+                <div class="prop-row">
+                  <dt class="prop-label">School</dt>
+                  <dd class="prop-value">Strayer University &#127482;&#127480;</dd>
+                </div>
+                <div class="prop-row">
+                  <dt class="prop-label">Degree</dt>
+                  <dd class="prop-value">Master of Science in Information Systems</dd>
+                </div>
+                <div class="prop-row">
+                  <dt class="prop-label">Period</dt>
+                  <dd class="prop-value">2015 &ndash; 2016</dd>
+                </div>
+              </dl>
+            </div>
+            <div role="tabpanel" id="panel-ulibre" aria-labelledby="tab-ulibre" class="tab-panel" hidden>
+              <dl>
+                <div class="prop-row">
+                  <dt class="prop-label">School</dt>
+                  <dd class="prop-value">Universidad Libre &#127464;&#127476;</dd>
+                </div>
+                <div class="prop-row">
+                  <dt class="prop-label">Degree</dt>
+                  <dd class="prop-value">Software Engineering (BA)</dd>
+                </div>
+                <div class="prop-row">
+                  <dt class="prop-label">Period</dt>
+                  <dd class="prop-value">2004 &ndash; 2009</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+    </win-window>
+
+  </main>
+
+  <nav class="taskbar" role="toolbar" aria-label="System bar">
+    <tb-version></tb-version>
+    <span class="taskbar-divider" aria-hidden="true"></span>
+    <span class="taskbar-spacer"></span>
+    <tb-theme></tb-theme>
+    <span class="taskbar-divider" aria-hidden="true"></span>
+    <div class="taskbar-tray">
+      <tb-status></tb-status>
+      <tb-clock></tb-clock>
+    </div>
+  </nav>
+  <win-dialog id="error-dialog"></win-dialog>
+
+  <script type="module" src="/src/scripts/app.ts"></script>
+</body>
+</html>

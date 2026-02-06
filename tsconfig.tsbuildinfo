@@ -1,0 +1,1 @@
+{"root":["./src/env.d.ts","./src/components/tb-clock.ts","./src/components/tb-status.ts","./src/components/tb-theme.ts","./src/components/tb-version.ts","./src/components/win-dialog.ts","./src/components/win-window.ts","./src/scripts/app.ts","./src/scripts/icons.ts","./src/scripts/tabs.ts","./src/scripts/theme.ts","./src/scripts/tree.ts"],"version":"5.9.3"}
