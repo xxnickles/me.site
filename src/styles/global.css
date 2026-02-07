@@ -51,10 +51,10 @@ body {
 }
 
 /* ===== GRID PLACEMENT ===== */
-.profile-window  { grid-column: 1; grid-row: 1 / 3; }
-.skills-window   { grid-column: 2 / 4; grid-row: 1; }
-.experience-window { grid-column: 2; grid-row: 2; }
-.education-window  { grid-column: 3; grid-row: 2; }
+.profile-window    { grid-column: 1; grid-row: 1 / 3; }
+.experience-window { grid-column: 2; grid-row: 1; }
+.education-window  { grid-column: 3; grid-row: 1; }
+.skills-window     { grid-column: 2 / 4; grid-row: 2; }
 
 /* ===== PROFILE (slotted content) ===== */
 .avatar {
