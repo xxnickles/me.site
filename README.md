@@ -1,12 +1,13 @@
-# Simple personal site
+# me.site
 
-A simple page created using SASS, Typescript, and Parcel
+A personal portfolio site built with TypeScript, Vite, and Web Components — styled after Windows 95.
 
 ## Requirements
 
-* [NodeJS](https://nodejs.org/en/)
+* [Node.js](https://nodejs.org/en/)
 
-## Useful commands
+## Commands
 
-* npm run dev -> Local test
-* npm run build -> Generates production package
+* `npm run dev` — Start local dev server
+* `npm run build` — Type-check and build for production
+* `npm run preview` — Preview the production build
