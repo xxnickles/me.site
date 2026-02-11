@@ -1,9 +1,5 @@
 const VERSION = __APP_VERSION__;
-const BUILD_DATE = new Date(__BUILD_DATE__).toLocaleDateString('en-US', {
-  month: 'short',
-  day: 'numeric',
-  year: 'numeric'
-});
+const BUILD_DATE = new Date(__BUILD_DATE__).toISOString().slice(0, 10);
 const GIT_HASH = __GIT_HASH__;
 const REPO_URL = 'https://github.com/xxnickles/me.site';
 
@@ -13,8 +9,7 @@ class TbVersion extends HTMLElement {
     version.textContent = `v${VERSION}`;
 
     const date = document.createElement('span');
-    date.title = 'Build date';
-    date.textContent = BUILD_DATE;
+    date.textContent = `Last Build On: ${BUILD_DATE}`;
 
     const commit = document.createElement('span');
     const link = document.createElement('a');
