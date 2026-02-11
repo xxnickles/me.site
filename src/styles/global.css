@@ -372,6 +372,7 @@ tb-version > span {
   height: 28px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
   box-shadow: var(--win-inset);
 }
 
@@ -431,6 +432,7 @@ tb-clock {
   display: flex;
   align-items: center;
   gap: 5px;
+  white-space: nowrap;
 }
 
 tb-status {
@@ -511,6 +513,9 @@ tb-status .offline { color: var(--win-text-muted); }
   }
   tb-version > span {
     padding: 2px 6px;
+  }
+  tb-version > span:nth-child(n+2) {
+    display: none;
   }
   tb-theme {
     font-size: .72rem;

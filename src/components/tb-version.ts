@@ -13,6 +13,7 @@ class TbVersion extends HTMLElement {
     version.textContent = `v${VERSION}`;
 
     const date = document.createElement('span');
+    date.title = 'Build date';
     date.textContent = BUILD_DATE;
 
     const commit = document.createElement('span');
