@@ -69,8 +69,14 @@ body {
   justify-content: center;
   font-size: 2rem;
   font-weight: 700;
-  margin: 0 auto 14px;
+  margin-bottom: 14px;
   box-shadow: var(--win-inset);
+}
+
+.profile-window section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-name {
@@ -449,12 +455,6 @@ tb-status .offline { color: var(--win-text-muted); }
   white-space: nowrap;
 }
 
-/* ===== ANIMATIONS ===== */
-@keyframes dialogPop {
-  from { transform: scale(.92); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
 /* ===== RESPONSIVE ===== */
 
 @media (769px <= width <= 960px) {
@@ -468,10 +468,9 @@ tb-status .offline { color: var(--win-text-muted); }
   .experience-window { grid-column: 1; grid-row: 3; }
   .education-window  { grid-column: 2; grid-row: 3; }
 
-  .profile-window .window-body {
-    display: flex;
+  .profile-window section {
     flex-wrap: wrap;
-    align-items: center;
+    flex-direction: row;
     gap: 16px;
   }
   .profile-window .avatar { margin: 0; }
@@ -493,18 +492,11 @@ tb-status .offline { color: var(--win-text-muted); }
   .experience-window { grid-column: 1; grid-row: 3; }
   .education-window  { grid-column: 1; grid-row: 4; }
 
-  .profile-window .window-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
+  .profile-window section { gap: 12px; }
   .profile-window .avatar { margin: 0; }
   .profile-info .profile-name,
   .profile-info .profile-title { text-align: center; }
   .profile-sections { flex-direction: column; gap: 0; }
-
-  .window-body { padding: 12px; }
   .profile-name { font-size: 1.2rem; }
   .avatar { width: 76px; height: 76px; font-size: 1.5rem; }
   .skills-grid { grid-template-columns: 1fr; }
