@@ -1,10 +1,13 @@
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import { execSync } from 'node:child_process';
 import path from 'node:path';
 
 export default defineConfig({
   define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version ?? '0.0.0')
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version ?? '0.0.0'),
+    __BUILD_DATE__: JSON.stringify(new Date().toISOString()),
+    __GIT_HASH__: JSON.stringify(execSync('git rev-parse --short HEAD').toString().trim())
   },
   resolve: {
     alias: {

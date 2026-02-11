@@ -1,6 +1,6 @@
 {
   "name": "me.site",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Personal Resume",
   "scripts": {
     "dev": "vite",
@@ -10,6 +10,10 @@
   },
   "author": "Alex F.",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxnickles/me.site"
+  },
   "devDependencies": {
     "npm-check-updates": "^19.3.2",
     "typescript": "^5.9.3",

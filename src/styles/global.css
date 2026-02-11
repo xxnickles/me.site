@@ -18,6 +18,7 @@
   --win-taskbar: light-dark(#c0c0c0, #2e3e50);
   --win-badge-bg: light-dark(#e8e8e8, #28384a);
   --win-badge-border: light-dark(#808080, #3a5068);
+  --win-commit: light-dark(#2e7d32, #66bb6a);
   --win-error: light-dark(#cc0000, #ff6666);
   --folder-color: light-dark(#c8a632, #e0c060);
   --win-shadow-deep: light-dark(#808080, #141e28);
@@ -352,14 +353,29 @@ address {
 }
 
 tb-version {
-  padding: 3px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: .78rem;
   font-weight: 600;
   color: var(--win-text-muted);
-  box-shadow: var(--win-inset);
+}
+
+tb-version > span {
+  padding: 3px 10px;
   height: 28px;
   display: flex;
   align-items: center;
+  box-shadow: var(--win-inset);
+}
+
+tb-version a {
+  color: var(--win-commit);
+  text-decoration: none;
+}
+
+tb-version a:hover {
+  text-decoration: underline;
 }
 
 .taskbar-divider {
@@ -497,7 +513,14 @@ tb-status .offline { color: var(--win-text-muted); }
     height: 36px;
     padding: 2px 6px;
   }
-  tb-version, tb-theme {
+  tb-version {
+    font-size: .72rem;
+    gap: 4px;
+  }
+  tb-version > span {
+    padding: 2px 6px;
+  }
+  tb-theme {
     font-size: .72rem;
     padding: 2px 6px;
   }
