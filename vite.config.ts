@@ -34,6 +34,18 @@ export default defineConfig({
     })
   ],
   build: {
-    target: 'ES2022'
+    target: 'ES2022',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'win-window': ['src/components/win-window.ts'],
+          'win-dialog': ['src/components/win-dialog.ts'],
+          'tb-clock':   ['src/components/tb-clock.ts'],
+          'tb-theme':   ['src/components/tb-theme.ts'],
+          'tb-version': ['src/components/tb-version.ts'],
+          'tb-status':  ['src/components/tb-status.ts'],
+        }
+      }
+    }
   }
 });
