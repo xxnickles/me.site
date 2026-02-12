@@ -1,4 +1,5 @@
 import { createIcon } from '../scripts/icons';
+import chromeStyles from './win-chrome.css?inline';
 import styles from './win-dialog.css?inline';
 
 const ERROR_MESSAGES = [
@@ -11,6 +12,9 @@ const ERROR_MESSAGES = [
   "General Protection Fault in module RESUME.DLL.\n\nPlease enjoy the content instead.",
 ];
 
+const chromeSheet = new CSSStyleSheet();
+chromeSheet.replaceSync(chromeStyles);
+
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(styles);
 
@@ -19,7 +23,7 @@ template.innerHTML = `
 <dialog role="alertdialog" aria-labelledby="dlg-title" aria-describedby="dlg-text">
   <article class="chrome">
     <header>
-      <h3 id="dlg-title">System Error</h3>
+      <h3 class="title-text" id="dlg-title">System Error</h3>
       <button class="btn-close" aria-label="Close dialog"><span class="icon-close" aria-hidden="true"></span></button>
     </header>
     <div class="dialog-body">
@@ -40,7 +44,7 @@ export class WinDialog extends HTMLElement {
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
-    shadow.adoptedStyleSheets = [sheet];
+    shadow.adoptedStyleSheets = [chromeSheet, sheet];
     shadow.appendChild(template.content.cloneNode(true));
   }
 

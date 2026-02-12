@@ -1,0 +1,59 @@
+/* Shared window chrome styles for Shadow DOM components */
+
+header {
+  background: var(--win-title-bg);
+  color: var(--win-title-text);
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .82rem;
+  font-weight: 600;
+  user-select: none;
+  min-height: 26px;
+  flex-shrink: 0;
+}
+
+.title-text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  width: 18px;
+  height: 18px;
+  background: var(--win-bg);
+  border: none;
+  box-shadow: var(--win-outset);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--win-text);
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+
+  &:active { box-shadow: var(--win-inset); }
+}
+
+.icon-close {
+  width: 10px;
+  height: 10px;
+  position: relative;
+}
+
+.icon-close::before, .icon-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  background: var(--win-text);
+}
+.icon-close::before { transform: translate(-50%, -50%) rotate(45deg); }
+.icon-close::after  { transform: translate(-50%, -50%) rotate(-45deg); }

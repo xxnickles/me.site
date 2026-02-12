@@ -1,5 +1,9 @@
 import { createIcon } from '../scripts/icons';
+import chromeStyles from './win-chrome.css?inline';
 import styles from './win-window.css?inline';
+
+const chromeSheet = new CSSStyleSheet();
+chromeSheet.replaceSync(chromeStyles);
 
 const sheet = new CSSStyleSheet();
 sheet.replaceSync(styles);
@@ -8,7 +12,7 @@ const template = document.createElement('template');
 template.innerHTML = `
 <header>
   <span class="title-icon" aria-hidden="true"></span>
-  <h2 id="win-title"></h2>
+  <h2 class="title-text" id="win-title"></h2>
   <div class="controls" role="group" aria-label="Window controls">
     <button class="btn-min" aria-label="Minimize"><span class="icon icon-min" aria-hidden="true"></span></button>
     <button class="btn-max" aria-label="Maximize"><span class="icon icon-max" aria-hidden="true"></span></button>
@@ -31,7 +35,7 @@ export class WinWindow extends HTMLElement {
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
-    shadow.adoptedStyleSheets = [sheet];
+    shadow.adoptedStyleSheets = [chromeSheet, sheet];
     shadow.appendChild(template.content.cloneNode(true));
   }
 
