@@ -2,6 +2,7 @@ import { defineConfig, type Plugin } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import { execSync } from 'node:child_process';
 import path from 'node:path';
+import pkg from './package.json' with { type: 'json' };
 
 const buildDate = new Date().toISOString();
 
@@ -29,10 +30,10 @@ function sitemapPlugin(): Plugin {
 
 export default defineConfig({
   define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version ?? '0.0.0'),
+    __APP_VERSION__: JSON.stringify(pkg.version),
     __BUILD_DATE__: JSON.stringify(buildDate),
     __GIT_HASH__: JSON.stringify(execSync('git rev-parse --short HEAD').toString().trim()),
-    __REPO_URL__: JSON.stringify(process.env.npm_package_repository_url ?? '')
+    __REPO_URL__: JSON.stringify(pkg.repository.url)
   },
   resolve: {
     alias: {
