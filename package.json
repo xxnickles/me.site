@@ -1,6 +1,6 @@
 {
   "name": "me.site",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Personal Resume",
   "scripts": {
     "dev": "vite",
@@ -26,6 +26,6 @@
     "workbox-strategies": "^7.4.0"
   },
   "dependencies": {
-    "lucide": "^0.563.0"
+    "lucide": "^0.564.0"
   }
 }

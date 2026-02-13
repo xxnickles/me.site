@@ -59,16 +59,10 @@ body {
 
 /* ===== PROFILE (slotted content) ===== */
 .avatar {
-  width: 96px;
-  height: 96px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
-  background: var(--win-dark);
-  color: var(--win-title-text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 700;
+  object-fit: cover;
   margin-bottom: 14px;
   box-shadow: var(--win-inset);
 }
@@ -500,7 +494,7 @@ tb-status .offline { color: var(--win-text-muted); }
   .profile-info .profile-title { text-align: center; }
   .profile-sections { flex-direction: column; gap: 0; }
   .profile-name { font-size: 1.2rem; }
-  .avatar { width: 76px; height: 76px; font-size: 1.5rem; }
+  .avatar { width: 96px; height: 96px; }
   .skills-grid { grid-template-columns: 1fr; }
 
   .taskbar {

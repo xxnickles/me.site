@@ -1,13 +1,38 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import { execSync } from 'node:child_process';
 import path from 'node:path';
 
+const buildDate = new Date().toISOString();
+
+function sitemapPlugin(): Plugin {
+  return {
+    name: 'generate-sitemap',
+    generateBundle() {
+      this.emitFile({
+        type: 'asset',
+        fileName: 'sitemap.xml',
+        source: `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.aflechas.me/</loc>
+    <lastmod>${buildDate.slice(0, 10)}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+`
+      });
+    }
+  };
+}
+
 export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version ?? '0.0.0'),
-    __BUILD_DATE__: JSON.stringify(new Date().toISOString()),
-    __GIT_HASH__: JSON.stringify(execSync('git rev-parse --short HEAD').toString().trim())
+    __BUILD_DATE__: JSON.stringify(buildDate),
+    __GIT_HASH__: JSON.stringify(execSync('git rev-parse --short HEAD').toString().trim()),
+    __REPO_URL__: JSON.stringify(process.env.npm_package_repository_url ?? '')
   },
   resolve: {
     alias: {
@@ -16,6 +41,7 @@ export default defineConfig({
     }
   },
   plugins: [
+    sitemapPlugin(),
     VitePWA({
       strategies: 'injectManifest',
       srcDir: 'src',
@@ -25,7 +51,8 @@ export default defineConfig({
         short_name: 'Alex F.',
         theme_color: '#008080',
         icons: [
-          { src: '/favicon.png', sizes: '192x192', type: 'image/png' }
+          { src: '/favicon.png', sizes: '192x192', type: 'image/png' },
+          { src: '/favicon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' }
         ]
       },
       injectManifest: {

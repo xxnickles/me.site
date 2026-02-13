@@ -1,7 +1,7 @@
 const VERSION = __APP_VERSION__;
 const BUILD_DATE = new Date(__BUILD_DATE__).toISOString().slice(0, 10);
 const GIT_HASH = __GIT_HASH__;
-const REPO_URL = 'https://github.com/xxnickles/me.site';
+const REPO_URL = __REPO_URL__;
 
 class TbVersion extends HTMLElement {
   connectedCallback() {
