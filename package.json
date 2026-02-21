@@ -15,7 +15,7 @@
     "url": "https://github.com/xxnickles/me.site"
   },
   "devDependencies": {
-    "npm-check-updates": "^19.3.2",
+    "npm-check-updates": "^19.4.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vite-plugin-pwa": "^1.2.0",
@@ -26,6 +26,6 @@
     "workbox-strategies": "^7.4.0"
   },
   "dependencies": {
-    "lucide": "^0.564.0"
+    "lucide": "^0.575.0"
   }
 }
