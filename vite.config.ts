@@ -35,12 +35,6 @@ export default defineConfig({
     __GIT_HASH__: JSON.stringify(execSync('git rev-parse --short HEAD').toString().trim()),
     __REPO_URL__: JSON.stringify(pkg.repository.url)
   },
-  resolve: {
-    alias: {
-      // lucide package.json `module` field points to a wrong path
-      'lucide': path.resolve(__dirname, 'node_modules/lucide/dist/esm/lucide/src/lucide.js')
-    }
-  },
   plugins: [
     sitemapPlugin(),
     VitePWA({
