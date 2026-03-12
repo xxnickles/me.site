@@ -1,7 +1,6 @@
 import { defineConfig, type Plugin } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import { execSync } from 'node:child_process';
-import path from 'node:path';
 import pkg from './package.json' with { type: 'json' };
 
 const buildDate = new Date().toISOString();
