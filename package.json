@@ -1,6 +1,6 @@
 {
   "name": "me.site",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "description": "Personal Resume",
   "scripts": {
     "dev": "vite",
@@ -17,7 +17,7 @@
   "devDependencies": {
     "npm-check-updates": "^19.6.3",
     "typescript": "^5.9.3",
-    "vite": "^7.3.1",
+    "vite": "^8.0.0",
     "vite-plugin-pwa": "^1.2.0",
     "workbox-core": "^7.4.0",
     "workbox-expiration": "^7.4.0",

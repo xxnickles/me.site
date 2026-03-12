@@ -14,6 +14,7 @@ import {
   CircleX,
   Plug,
   Unplug,
+  FileText,
 } from 'lucide';
 import type { IconNode, SVGProps } from 'lucide';
 
@@ -32,6 +33,7 @@ const iconMap: Record<string, IconNode> = {
   'circle-x': CircleX,
   plug: Plug,
   unplug: Unplug,
+  'file-text': FileText,
 };
 
 /** Create an SVG element from an icon name */

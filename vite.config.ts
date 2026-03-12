@@ -1,7 +1,6 @@
 import { defineConfig, type Plugin } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import { execSync } from 'node:child_process';
-import path from 'node:path';
 import pkg from './package.json' with { type: 'json' };
 
 const buildDate = new Date().toISOString();
@@ -56,16 +55,22 @@ export default defineConfig({
     })
   ],
   build: {
-    target: 'ES2022',
+    target: 'es2022',
+    cssTarget: 'chrome100',
     rollupOptions: {
       output: {
-        manualChunks: {
-          'win-window': ['src/components/win-window.ts'],
-          'win-dialog': ['src/components/win-dialog.ts'],
-          'tb-clock':   ['src/components/tb-clock.ts'],
-          'tb-theme':   ['src/components/tb-theme.ts'],
-          'tb-version': ['src/components/tb-version.ts'],
-          'tb-status':  ['src/components/tb-status.ts'],
+        manualChunks(id) {
+          const chunks: Record<string, string> = {
+            'win-window': 'win-window',
+            'win-dialog': 'win-dialog',
+            'tb-clock': 'tb-clock',
+            'tb-theme': 'tb-theme',
+            'tb-version': 'tb-version',
+            'tb-status': 'tb-status',
+          };
+          for (const [match, name] of Object.entries(chunks)) {
+            if (id.includes(`/components/${match}`)) return name;
+          }
         }
       }
     }
