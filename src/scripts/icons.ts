@@ -4,7 +4,6 @@ import {
   Code,
   Briefcase,
   GraduationCap,
-  Linkedin,
   ChevronDown,
   ChevronRight,
   Folder,
@@ -18,12 +17,19 @@ import {
 } from 'lucide';
 import type { IconNode, SVGProps } from 'lucide';
 
+// Lucide dropped brand icons in v1.x — define LinkedIn inline
+const LinkedinIcon: IconNode = [
+  ['path', { d: 'M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z' }],
+  ['rect', { width: '4', height: '12', x: '2', y: '9' }],
+  ['circle', { cx: '4', cy: '4', r: '2' }],
+];
+
 const iconMap: Record<string, IconNode> = {
   user: User,
   code: Code,
   briefcase: Briefcase,
   'graduation-cap': GraduationCap,
-  linkedin: Linkedin,
+  linkedin: LinkedinIcon,
   'chevron-down': ChevronDown,
   'chevron-right': ChevronRight,
   folder: Folder,

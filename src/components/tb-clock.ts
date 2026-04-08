@@ -26,13 +26,13 @@ class TbClock extends HTMLElement {
   }
 
   private update() {
-    const d = new Date();
-    const h = d.getHours();
-    const m = d.getMinutes().toString().padStart(2, '0');
+    const now = Temporal.Now.plainTimeISO();
+    const h = now.hour;
+    const m = now.minute.toString().padStart(2, '0');
     const period = h >= 12 ? 'PM' : 'AM';
     const hour12 = h % 12 || 12;
     this.timeEl.textContent = `${hour12}:${m} ${period}`;
-    this.setAttribute('datetime', d.toISOString());
+    this.setAttribute('datetime', Temporal.Now.instant().toString());
   }
 }
 
