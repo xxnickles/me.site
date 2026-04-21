@@ -1,6 +1,6 @@
 {
   "name": "me.site",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Personal Resume",
   "scripts": {
     "dev": "vite",
@@ -15,10 +15,10 @@
     "url": "https://github.com/xxnickles/me.site"
   },
   "devDependencies": {
-    "npm-check-updates": "^21.0.2",
+    "npm-check-updates": "^21.0.3",
     "typescript": "^6.0.3",
     "vite": "^8.0.9",
-    "vite-plugin-pwa": "^0.19.8",
+    "vite-plugin-pwa": "^1.2.0",
     "workbox-core": "^7.4.0",
     "workbox-expiration": "^7.4.0",
     "workbox-precaching": "^7.4.0",

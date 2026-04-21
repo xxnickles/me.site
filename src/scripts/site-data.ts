@@ -76,6 +76,17 @@ export const SITE: SiteData = {
     { group: 'Cloud', items: ['Azure', 'Docker', 'CI/CD'] },
     { group: 'Data', items: ['SQL Server', 'MongoDB', 'Cosmos DB'] },
     {
+      group: 'AI',
+      items: [
+        'Claude Code',
+        'Claude (Anthropic API)',
+        'Claude Agent SDK',
+        'GitHub Copilot',
+        'Prompt Engineering',
+        'Agentic Workflows',
+      ],
+    },
+    {
       group: 'Practices',
       items: ['SOLID', 'Design Patterns', 'OOP', 'Functional', 'Reactive', 'SCRUM', 'Testing'],
     },
@@ -86,8 +97,8 @@ export const SITE: SiteData = {
       flag: '\uD83C\uDDFA\uD83C\uDDF8',
       role: 'Sr. Software Engineer',
       period: '2018 \u2014 Present',
-      stack: 'Angular \u00b7 .NET Core \u00b7 Azure',
-      note: 'Services for US motor-vehicle jurisdictions.',
+      stack: 'Angular \u00b7 .NET Core \u00b7 Azure \u00b7 Claude Code \u00b7 Copilot',
+      note: 'Services for US motor-vehicle jurisdictions; AI-assisted development with Claude Code and Copilot.',
     },
     {
       company: 'Jobspring / ACR',

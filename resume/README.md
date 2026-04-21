@@ -4,7 +4,7 @@
 
 ## Summary
 
-Bilingual (Spanish/English) Full Stack Software Engineer with 15+ years of experience designing, developing, and maintaining web and desktop applications across multiple platforms — particularly .NET and Node.js. Experienced in front-end development with Angular, Vue, and modern web standards. Committed to continuous learning and delivering value through software.
+Bilingual (Spanish/English) Full Stack Software Engineer with 15+ years of experience designing, developing, and maintaining web and desktop applications across multiple platforms — particularly .NET and Node.js. Experienced in front-end development with Angular, Vue, and modern web standards. Hands-on with AI-assisted engineering through the Anthropic ecosystem (Claude, Claude Code, Agent SDK) and GitHub Copilot. Committed to continuous learning and delivering value through software.
 
 ## Career Timeline
 
@@ -68,10 +68,16 @@ mindmap
       Reactive & Flux Patterns
       SCRUM
       Testing – NUnit, Jest, Mocha, Karma
+    AI
+      Claude Code
+      Claude (Anthropic API)
+      Claude Agent SDK
+      GitHub Copilot
+      Prompt Engineering
+      Agentic Workflows
     Tools
       Git / TFS
       Visual Studio / Rider / VS Code
-      AI Tooling – Copilot, Claude Code
       Linux / macOS
 ```
 
@@ -85,9 +91,10 @@ var role = "Sr. Software Engineer";
 var period = (Start: 2018, End: "Present");
 var frontend = "Angular";
 var backend = ".NET Core";
+var aiTooling = new[] { "Claude Code", "GitHub Copilot" };
 var task = "Development of applications to provide services to participant jurisdictions (states)";
 
-Console.WriteLine($"{role} at {company} ({period.Start}–{period.End}): {task} using {frontend} and {backend}");
+Console.WriteLine($"{role} at {company} ({period.Start}–{period.End}): {task} using {frontend} and {backend}, with AI-assisted development via [{string.Join(", ", aiTooling)}]");
 ```
 
 ### Jobspring Partners / ACR — Reston, VA, US 🇺🇸

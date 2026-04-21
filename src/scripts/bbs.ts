@@ -108,7 +108,7 @@ function initBoot(): { onKick: (fn: () => void) => void } {
     if (line === undefined) return;
     textEl.append(line + '\n');
     i++;
-    setTimeout(step, i === 1 ? 300 : 100);
+    setTimeout(step, i === 1 ? 600 : 220);
   };
   step();
 
@@ -122,10 +122,10 @@ function initBoot(): { onKick: (fn: () => void) => void } {
       bootEl.hidden = true;
       screen.hidden = false;
       for (const fn of listeners) fn();
-    }, 80);
+    }, 150);
   };
 
-  setTimeout(finish, lines.length * 100 + 500);
+  setTimeout(finish, lines.length * 220 + 1200);
   window.addEventListener('keydown', finish, { once: true });
   bootEl.addEventListener('click', finish, { once: true });
 
