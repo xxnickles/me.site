@@ -43,7 +43,8 @@ export default defineConfig({
       manifest: {
         name: 'Alex Flechas — Software Engineer',
         short_name: 'Alex F.',
-        theme_color: '#008080',
+        theme_color: '#000000',
+        background_color: '#000000',
         icons: [
           { src: '/favicon.png', sizes: '192x192', type: 'image/png' },
           { src: '/favicon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' }
@@ -56,23 +57,6 @@ export default defineConfig({
   ],
   build: {
     target: 'es2022',
-    cssTarget: 'chrome100',
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          const chunks: Record<string, string> = {
-            'win-window': 'win-window',
-            'win-dialog': 'win-dialog',
-            'tb-clock': 'tb-clock',
-            'tb-theme': 'tb-theme',
-            'tb-version': 'tb-version',
-            'tb-status': 'tb-status',
-          };
-          for (const [match, name] of Object.entries(chunks)) {
-            if (id.includes(`/components/${match}`)) return name;
-          }
-        }
-      }
-    }
+    cssTarget: 'chrome100'
   }
 });

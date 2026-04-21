@@ -1,419 +1,203 @@
 <!doctype html>
-<html lang="en" data-theme="light">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Alex Flechas — Software Engineer specializing in .NET, TypeScript, and cloud solutions. Portfolio showcasing skills, experience, and education."
-        />
-        <meta name="author" content="Alex Flechas" />
-        <meta
-            name="keywords"
-            content="Alex Flechas, Software Engineer, Web Developer, .NET Developer, TypeScript, Azure, Portfolio"
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.aflechas.me/" />
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Alex Flechas — Software Engineer. BBS-style portfolio showcasing skills, experience, and education."
+    />
+    <meta name="author" content="Alex Flechas" />
+    <meta
+      name="keywords"
+      content="Alex Flechas, Software Engineer, Web Developer, .NET Developer, TypeScript, Azure, Portfolio"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.aflechas.me/" />
 
-        <!-- Open Graph -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.aflechas.me/" />
-        <meta property="og:title" content="Alex Flechas — Software Engineer" />
-        <meta
-            property="og:description"
-            content="Alex Flechas is a Software Engineer specializing in .NET, TypeScript, and cloud solutions. Explore his portfolio for skills, experience, and education."
-        />
-        <meta
-            property="og:image"
-            content="https://www.aflechas.me/favicon-512.png"
-        />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.aflechas.me/" />
+    <meta property="og:title" content="Alex Flechas — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Alex Flechas is a Software Engineer specializing in .NET, TypeScript, and cloud solutions. Explore his portfolio for skills, experience, and education."
+    />
+    <meta property="og:image" content="https://www.aflechas.me/favicon-512.png" />
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Alex Flechas — Software Engineer" />
-        <meta
-            name="twitter:description"
-            content="Alex Flechas is a Software Engineer specializing in .NET, TypeScript, and cloud solutions. Explore his portfolio for skills, experience, and education."
-        />
-        <meta name="twitter:image" content="/favicon-512.png" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Alex Flechas — Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Alex Flechas is a Software Engineer specializing in .NET, TypeScript, and cloud solutions. Explore his portfolio for skills, experience, and education."
+    />
+    <meta name="twitter:image" content="/favicon-512.png" />
 
-        <!-- Structured Data -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Person",
-                "name": "Alex Flechas",
-                "url": "https://www.aflechas.me/",
-                "jobTitle": "Software Engineer",
-                "sameAs": ["https://www.linkedin.com/in/alexflechas/"],
-                "image": "https://www.aflechas.me/favicon-512.png",
-                "knowsAbout": [
-                    "C#",
-                    ".NET",
-                    "TypeScript",
-                    "JavaScript",
-                    "Azure",
-                    "Cloud Computing"
-                ]
-            }
-        </script>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alex Flechas",
+        "url": "https://www.aflechas.me/",
+        "jobTitle": "Software Engineer",
+        "sameAs": ["https://www.linkedin.com/in/alexflechas/"],
+        "image": "https://www.aflechas.me/favicon-512.png",
+        "knowsAbout": [
+          "C#",
+          ".NET",
+          "TypeScript",
+          "JavaScript",
+          "Azure",
+          "Cloud Computing"
+        ]
+      }
+    </script>
 
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <title>Alex Flechas — Software Engineer</title>
-        <script>
-            // Detect theme before first paint to prevent flash
-            (function () {
-                var saved = localStorage.getItem("theme");
-                if (saved) {
-                    document.documentElement.setAttribute("data-theme", saved);
-                } else if (
-                    window.matchMedia &&
-                    matchMedia("(prefers-color-scheme:dark)").matches
-                ) {
-                    document.documentElement.setAttribute("data-theme", "dark");
-                }
-            })();
-        </script>
-    </head>
-    <body>
-        <main class="desktop">
-            <!-- Profile -->
-            <win-window class="profile-window" title="profile.exe" icon="user">
-                <section aria-label="Profile">
-                    <img class="avatar" src="/avatar.svg" alt="Alex Flechas" />
-                    <div class="profile-info">
-                        <h1 class="profile-name">Alex Flechas</h1>
-                        <p class="profile-title">Software Engineer</p>
-                    </div>
-                    <div class="profile-sections">
-                        <div>
-                            <hr class="separator" />
-                            <h3 class="section-label">About Me</h3>
-                            <p class="about-text">
-                                I &#10084;&#65039; software development. Do you
-                                really need to know anything else?
-                            </p>
-                        </div>
-                        <address>
-                            <hr class="separator" />
-                            <h3 class="section-label">Contact</h3>
-                            <a
-                                class="contact-link"
-                                href="https://www.linkedin.com/in/alexflechas/"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                <i data-lucide="linkedin"></i> LinkedIn
-                            </a>
-                            <a
-                                class="contact-link"
-                                href="https://github.com/xxnickles/me.site/blob/main/resume/README.md"
-                                target="_blank"
-                                rel="noopener"
-                            >
-                                <i data-lucide="file-text"></i> Resume
-                            </a>
-                        </address>
-                    </div>
-                </section>
-            </win-window>
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>Alex Flechas — BBS</title>
+    <script>
+      // Detect theme before first paint to prevent flash
+      (function () {
+        var saved = null;
+        try { saved = localStorage.getItem('bbs-theme'); } catch (e) {}
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (
+          window.matchMedia &&
+          matchMedia('(prefers-color-scheme: light)').matches
+        ) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <h1 class="sr-only">Alex Flechas — Software Engineer</h1>
 
-            <!-- Skills -->
-            <win-window class="skills-window" title="skills.dll" icon="code">
-                <section aria-label="Skills">
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3>Languages</h3>
-                            <div class="skill-badges">
-                                <span class="badge">C#</span>
-                                <span class="badge">JavaScript</span>
-                                <span class="badge">TypeScript</span>
-                                <span class="badge">F#</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Web Technologies</h3>
-                            <div class="skill-badges">
-                                <span class="badge">.NET</span>
-                                <span class="badge">ASP.NET MVC</span>
-                                <span class="badge">Blazor</span>
-                                <span class="badge">REST API</span>
-                                <span class="badge">gRPC</span>
-                                <span class="badge">Entity Framework</span>
-                                <span class="badge">NodeJS</span>
-                                <span class="badge">Angular</span>
-                                <span class="badge">Vue</span>
-                                <span class="badge">RxJs</span>
-                                <span class="badge">HTMX</span>
-                                <span class="badge">Web Components</span>
-                                <span class="badge">Vite</span>
-                                <span class="badge">CSS</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Cloud &amp; Infrastructure</h3>
-                            <div class="skill-badges">
-                                <span class="badge">Azure</span>
-                                <span class="badge">Docker</span>
-                                <span class="badge">CI/CD</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Data</h3>
-                            <div class="skill-badges">
-                                <span class="badge">SQL Server</span>
-                                <span class="badge">MongoDB</span>
-                                <span class="badge">Cosmos DB</span>
-                            </div>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Practices</h3>
-                            <div class="skill-badges">
-                                <span class="badge">SOLID</span>
-                                <span class="badge">Design Patterns</span>
-                                <span class="badge">OOP</span>
-                                <span class="badge"
-                                    >Functional Programming</span
-                                >
-                                <span class="badge">Reactive Programming</span>
-                                <span class="badge">SCRUM</span>
-                                <span class="badge">Testing</span>
-                                <span class="badge"
-                                    >Full-Stack Development</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </win-window>
+    <div id="boot" aria-hidden="true"><pre id="boot-text"></pre></div>
 
-            <!-- Experience: Tree View -->
-            <win-window
-                class="experience-window"
-                title="experience.log"
-                icon="briefcase"
-            >
-                <section aria-label="Experience" id="experience-tree">
-                    <ul class="tree">
-                        <li class="tree-node">
-                            <div class="tree-header">
-                                <i
-                                    data-lucide="chevron-down"
-                                    class="chevron"
-                                ></i>
-                                <i data-lucide="folder" class="folder-icon"></i>
-                                AAMVA &#127482;&#127480;
-                            </div>
-                            <ul class="tree-children">
-                                <li class="tree-leaf">
-                                    <b>Role:</b> Sr. Software Engineer
-                                </li>
-                                <li class="tree-leaf">
-                                    <b>Period:</b> 2018 &ndash; Present
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="tree-node">
-                            <div class="tree-header">
-                                <i
-                                    data-lucide="chevron-down"
-                                    class="chevron"
-                                ></i>
-                                <i data-lucide="folder" class="folder-icon"></i>
-                                JobSprint (ACR) &#127482;&#127480;
-                            </div>
-                            <ul class="tree-children">
-                                <li class="tree-leaf">
-                                    <b>Role:</b> Dotnet Developer
-                                </li>
-                                <li class="tree-leaf"><b>Period:</b> 2017</li>
-                            </ul>
-                        </li>
-                        <li class="tree-node">
-                            <div class="tree-header">
-                                <i
-                                    data-lucide="chevron-down"
-                                    class="chevron"
-                                ></i>
-                                <i data-lucide="folder" class="folder-icon"></i>
-                                Intersoft (eltiempo.com) &#127464;&#127476;
-                            </div>
-                            <ul class="tree-children">
-                                <li class="tree-leaf">
-                                    <b>Role:</b> Consultant Engineer
-                                </li>
-                                <li class="tree-leaf">
-                                    <b>Period:</b> 2013 &ndash; 2014
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="tree-node">
-                            <div class="tree-header">
-                                <i
-                                    data-lucide="chevron-down"
-                                    class="chevron"
-                                ></i>
-                                <i data-lucide="folder" class="folder-icon"></i>
-                                Bizonte &#127464;&#127476;
-                            </div>
-                            <ul class="tree-children">
-                                <li class="tree-leaf">
-                                    <b>Role:</b> Software Engineer
-                                </li>
-                                <li class="tree-leaf"><b>Period:</b> 2013</li>
-                            </ul>
-                        </li>
-                        <li class="tree-node">
-                            <div class="tree-header">
-                                <i
-                                    data-lucide="chevron-down"
-                                    class="chevron"
-                                ></i>
-                                <i data-lucide="folder" class="folder-icon"></i>
-                                ITBF Consulting &#127464;&#127476;
-                            </div>
-                            <ul class="tree-children">
-                                <li class="tree-leaf">
-                                    <b>Role:</b> Software Engineer
-                                </li>
-                                <li class="tree-leaf"><b>Period:</b> 2012</li>
-                            </ul>
-                        </li>
-                        <li class="tree-node">
-                            <div class="tree-header">
-                                <i
-                                    data-lucide="chevron-down"
-                                    class="chevron"
-                                ></i>
-                                <i data-lucide="folder" class="folder-icon"></i>
-                                Estudios y Dise&ntilde;os &#127464;&#127476;
-                            </div>
-                            <ul class="tree-children">
-                                <li class="tree-leaf">
-                                    <b>Role:</b> Developer &amp; Infrastructure
-                                    Manager
-                                </li>
-                                <li class="tree-leaf">
-                                    <b>Period:</b> 2010 &ndash; 2012
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-            </win-window>
+    <header class="hdr">
+      <div class="hdr-inner">
+        <pre class="art" id="banner" aria-hidden="true"></pre>
+        <div class="hdr-ctrls">
+          <button
+            class="toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <span id="theme-icon" aria-hidden="true">☽</span>
+            <span id="theme-label">DARK</span>
+            <span class="k" aria-hidden="true">[T]</span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-            <!-- Education: Tabs -->
-            <win-window
-                class="education-window"
-                title="education.dat"
-                icon="graduation-cap"
-            >
-                <section aria-label="Education" id="education-tabs">
-                    <div class="tab-control">
-                        <div
-                            class="tab-bar"
-                            role="tablist"
-                            aria-label="Education entries"
-                        >
-                            <button
-                                role="tab"
-                                id="tab-strayer"
-                                aria-selected="true"
-                                aria-controls="panel-strayer"
-                                tabindex="0"
-                                class="tab-btn"
-                            >
-                                Strayer
-                            </button>
-                            <button
-                                role="tab"
-                                id="tab-ulibre"
-                                aria-selected="false"
-                                aria-controls="panel-ulibre"
-                                tabindex="-1"
-                                class="tab-btn"
-                            >
-                                U. Libre
-                            </button>
-                        </div>
-                        <div class="tab-panel-area">
-                            <div
-                                role="tabpanel"
-                                id="panel-strayer"
-                                aria-labelledby="tab-strayer"
-                                class="tab-panel"
-                            >
-                                <dl>
-                                    <div class="prop-row">
-                                        <dt class="prop-label">School</dt>
-                                        <dd class="prop-value">
-                                            Strayer University
-                                            &#127482;&#127480;
-                                        </dd>
-                                    </div>
-                                    <div class="prop-row">
-                                        <dt class="prop-label">Degree</dt>
-                                        <dd class="prop-value">
-                                            Master of Science in Information
-                                            Systems
-                                        </dd>
-                                    </div>
-                                    <div class="prop-row">
-                                        <dt class="prop-label">Period</dt>
-                                        <dd class="prop-value">
-                                            2015 &ndash; 2016
-                                        </dd>
-                                    </div>
-                                </dl>
-                            </div>
-                            <div
-                                role="tabpanel"
-                                id="panel-ulibre"
-                                aria-labelledby="tab-ulibre"
-                                class="tab-panel"
-                                hidden
-                            >
-                                <dl>
-                                    <div class="prop-row">
-                                        <dt class="prop-label">School</dt>
-                                        <dd class="prop-value">
-                                            Universidad Libre &#127464;&#127476;
-                                        </dd>
-                                    </div>
-                                    <div class="prop-row">
-                                        <dt class="prop-label">Degree</dt>
-                                        <dd class="prop-value">
-                                            Software Engineering (BA)
-                                        </dd>
-                                    </div>
-                                    <div class="prop-row">
-                                        <dt class="prop-label">Period</dt>
-                                        <dd class="prop-value">
-                                            2004 &ndash; 2009
-                                        </dd>
-                                    </div>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </win-window>
-        </main>
+    <main class="screen" id="screen" hidden>
+      <section class="whois" aria-labelledby="whois-title">
+        <h2 class="whois-title" id="whois-title">&nbsp;whois: alex&nbsp;</h2>
+        <dl class="whois-body">
+          <dt>name</dt>
+          <dd id="w-name"></dd>
+          <dt>role</dt>
+          <dd id="w-role"></dd>
+          <dt>loc</dt>
+          <dd id="w-loc"></dd>
+          <dt>years</dt>
+          <dd id="w-yrs"></dd>
+          <dd class="quote" id="w-quote"></dd>
+        </dl>
+      </section>
 
-        <nav class="taskbar" role="toolbar" aria-label="System bar">
-            <tb-version></tb-version>
-            <span class="taskbar-divider" aria-hidden="true"></span>
-            <span class="taskbar-spacer"></span>
-            <tb-theme></tb-theme>
-            <span class="taskbar-divider" aria-hidden="true"></span>
-            <div class="taskbar-tray">
-                <tb-status></tb-status>
-                <tb-clock></tb-clock>
-            </div>
-        </nav>
-        <win-dialog id="error-dialog"></win-dialog>
+      <nav class="menu" aria-labelledby="menu-title">
+        <h2 class="menu-title" id="menu-title">
+          ┌─ MAIN MENU ─ click, tap, or press a number ──
+        </h2>
+        <ul class="menu-grid">
+          <li>
+            <button class="menu-item" type="button" data-go="about">
+              <span class="k" aria-hidden="true">[1]</span>
+              <span>About</span>
+            </button>
+          </li>
+          <li>
+            <button class="menu-item" type="button" data-go="skills">
+              <span class="k" aria-hidden="true">[2]</span>
+              <span>Skills matrix</span>
+            </button>
+          </li>
+          <li>
+            <button class="menu-item" type="button" data-go="experience">
+              <span class="k" aria-hidden="true">[3]</span>
+              <span>Employment log</span>
+            </button>
+          </li>
+          <li>
+            <button class="menu-item" type="button" data-go="education">
+              <span class="k" aria-hidden="true">[4]</span>
+              <span>Education</span>
+            </button>
+          </li>
+          <li>
+            <button class="menu-item" type="button" data-go="contact">
+              <span class="k" aria-hidden="true">[5]</span>
+              <span>Send mail</span>
+            </button>
+          </li>
+          <li>
+            <button class="menu-item" type="button" data-go="all">
+              <span class="k" aria-hidden="true">[A]</span>
+              <span>Read all</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
 
-        <script type="module" src="/src/scripts/app.ts"></script>
-    </body>
+      <p class="hint" id="hint">
+        Select an option — press <b>[1]</b>, <b>[2]</b>, <b>[3]</b>, <b>[4]</b>,
+        <b>[5]</b>, or <b>[A]</b><br />
+        <span style="font-size: 12px; opacity: 0.8">
+          ↑ ↓ to move · <b>↵</b> select · <b>ESC</b> close · <b>?</b> help
+        </span>
+        <span class="blink" aria-hidden="true">▋</span>
+      </p>
+
+      <div id="content" aria-live="polite"></div>
+    </main>
+
+    <footer class="sysline" aria-label="Status line">
+      <span><b>NODE:</b> aflechas.me</span>
+      <span class="hide-sm"><b>USER:</b> guest</span>
+      <span class="hide-sm"><b>BAUD:</b> 9600</span>
+      <span id="sys-time"><b>TIME:</b> --:--</span>
+      <span class="right">
+        <span id="sys-ver" class="hide-sm"></span>
+        <span id="last-cmd" class="hide-sm"><b>CMD:</b> —</span>
+        <button class="help-btn" id="help-btn" type="button">[?] HELP</button>
+      </span>
+    </footer>
+
+    <dialog class="help-ov" id="help-ov" aria-labelledby="help-title">
+      <button class="close" id="help-close" type="button" aria-label="Close help">
+        ×
+      </button>
+      <h2 id="help-title">══ KEYBOARD SHORTCUTS ══</h2>
+      <dl>
+        <dt>1 … 5</dt><dd>Jump to section</dd>
+        <dt>A</dt><dd>Read all sections</dd>
+        <dt>↑ / ↓</dt><dd>Move through menu</dd>
+        <dt>↵ Enter</dt><dd>Open focused item</dd>
+        <dt>Esc</dt><dd>Close / return to menu</dd>
+        <dt>T</dt><dd>Toggle dark / light</dd>
+        <dt>?</dt><dd>This help</dd>
+      </dl>
+      <p class="foot">Press <b>?</b> or Esc to close · This is a BBS, after all.</p>
+    </dialog>
+
+    <script type="module" src="/src/scripts/app.ts"></script>
+  </body>
 </html>
