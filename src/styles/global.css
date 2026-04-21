@@ -519,6 +519,10 @@ a:hover { color: var(--phos-hi); background: var(--phos-dim); text-decoration: n
   .sysline { font-size: 10.5px; gap: 10px; padding: 4px 10px; }
   .sysline .right { gap: 8px; }
   .sysline .hide-sm { display: none; }
+
+  /* Keyboard-only affordances have no touch equivalent — hide them. */
+  .hint { display: none; }
+  .help-btn { display: none; }
 }
 
 @media (max-width: 460px) {
